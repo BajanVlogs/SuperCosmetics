@@ -7,7 +7,7 @@ use ninjaknights\SuperCosmetics\util\skin\SkinUtil;
 use pocketmine\player\Player;
 use jojoe77777\FormAPI\SimpleForm;
 
-class MorphForm
+class SimpleForm extends MorphForm
 {
 
     public function morphForm(Player $player)
