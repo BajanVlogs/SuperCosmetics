@@ -12,6 +12,7 @@ class Main extends PluginBase
     private static Main $instance;
     public array $skinTypes = [];
     public array $skinNames = [];
+    public array $enabledParticles = []; // Store enabled particles for each player
 
     public function onEnable(): void
     {
@@ -37,14 +38,29 @@ class Main extends PluginBase
         $skin->getSkins();
     }
 
-    // Fake Functions
-    // TODO: Use internal API to determine which particles are enabled for who
+    // Function to check if particles are enabled for a player
     public function hasEnabledParticle(Player $player): bool
     {
-        return true;
+        $playerName = $player->getName();
+        // Check if the player's name exists in the enabledParticles array
+        return isset($this->enabledParticles[$playerName]) && $this->enabledParticles[$playerName];
     }
 
-    public static function getInstance() : Main
+    // Function to enable particles for a player
+    public function enableParticles(Player $player): void
+    {
+        $playerName = $player->getName();
+        $this->enabledParticles[$playerName] = true;
+    }
+
+    // Function to disable particles for a player
+    public function disableParticles(Player $player): void
+    {
+        $playerName = $player->getName();
+        $this->enabledParticles[$playerName] = false;
+    }
+
+    public static function getInstance(): Main
     {
         return self::$instance;
     }
