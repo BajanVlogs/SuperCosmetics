@@ -5,7 +5,7 @@ namespace ninjaknights\SuperCosmetics\forms;
 use pocketmine\player\Player;
 use jojoe77777\FormAPI\SimpleForm;
 
-class MainForm
+class SimpleForm extends MainForm
 {
 
     public function menuForm(Player $player)
