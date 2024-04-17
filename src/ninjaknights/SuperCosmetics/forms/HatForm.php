@@ -7,7 +7,7 @@ use ninjaknights\SuperCosmetics\util\skin\SkinUtil;
 use pocketmine\player\Player;
 use jojoe77777\FormAPI\SimpleForm;
 
-class SimpleForm extends MainForm
+class SimpleForm extends HatForm
 {
 
     public function hatForm(Player $player)
