@@ -3,7 +3,7 @@
 namespace ninjaknights\SuperCosmetics\forms;
 
 use pocketmine\player\Player;
-use jojoe7777\FormAPI\SimpleForm;
+use jojoe77777\FormAPI\SimpleForm;
 
 class MainForm
 {
