@@ -5,7 +5,7 @@ namespace ninjaknights\SuperCosmetics\forms;
 use ninjaknights\SuperCosmetics\Main;
 use ninjaknights\SuperCosmetics\util\skin\SkinUtil;
 use pocketmine\player\Player;
-use Vecnavium\FormsUI\SimpleForm;
+use jojoe7777\FormAPI\SimpleForm;
 
 class MorphForm
 {
